@@ -1,0 +1,279 @@
+*, *::after, *::before { box-sizing: border-box; }
+p { margin: 0; padding: 0; }
+
+/* Items are listed in order of appearance per category */
+
+/* CSS Variables */
+
+:root {
+  /* Light mode settings */
+  --bg-body: #fff;
+  --bg-button: #fff;
+  --border-button: #D1D5DB;
+  --color: #374151;
+  --btn-dk-bg: #3D4B60;
+  --btn-dk-border: transparent;
+  --btn-dk-color: #fff;
+}
+.darkmode {
+  /* Dark mode settings */
+  --bg-body: #1F2937;
+  --bg-button: #3D4B60;
+  --border-button: transparent;
+  --color: #fff;
+  --btn-dk-bg: #fff;
+  --btn-dk-border: #374151;
+  --btn-dk-color: #374151;
+}
+
+/* Typoraphy, contains: font-*, color, letter-spacing, 
+text-align, text-transform  */
+
+html, body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color);
+}
+
+.btn {
+  color: var(--color);
+}
+
+.btn--dark-mode {
+  color: var(--btn-dk-color);
+}
+
+#color-selector {
+  text-transform: capitalize;
+}
+
+.colors__container {
+  text-align: center;
+}
+
+.colors--name {
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px black;
+}
+
+.colors--hex {
+  letter-spacing: 1.5px;
+}
+
+footer {
+  color: var(--color);
+  text-align: center;
+}
+
+/* Overall Styling */
+
+html, body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-body);
+  transition: all 0.75s;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1300px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0 0.5em;
+  height: 20.5vh;
+}
+
+h1:focus {
+  border: none;
+  outline: none;
+}
+
+main {
+  padding: 1em;
+  height: 100%;
+}
+
+.color-selections {
+  display: flex;
+  flex-wrap: wrap;
+  height: 22vh;
+}
+
+.color-selections * {
+  margin: 0;
+  height: 40px;
+  width: 100%;
+  cursor: pointer;
+}
+
+input[type="color"]::-moz-color-swatch {
+  border: 3px solid var(--border-button);
+}
+
+#color-selector {
+  padding: 0 1em;
+  border: 1px solid var(--border-button);
+}
+
+.colors {
+  display: flex;
+  flex-direction: column;
+  height: 48vh;
+}
+
+.colors__container {
+  display: flex;
+  height: 20%;
+  cursor: pointer;
+  transition: all 0.75s;
+  z-index: 100;
+}
+.colors__container:hover,
+.colors__container:focus {
+  border: 1px solid;
+  border-radius: 10px;
+  overflow: hidden;
+  transform: scale(1.075, 1.2);
+  z-index: 200;
+}
+.colors__container:active {
+  transform: scale(1);
+}
+
+.colors--bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 1em 0;
+  height: 100%;
+  width: 60%;
+  background: dodgerblue;
+  border: 1px solid transparent;
+}
+
+.colors--name {
+  margin-left: 0.25em;
+  padding: 1em 0.5em;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.colors--hex {
+  padding: 1em;
+  width: 40%;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 6.5vh;
+  background: var(--bg-body);
+  transition: all 0.75s;
+}
+
+/* BUTTONS */
+
+.btn {
+  padding: 0.5em 1em;
+  transition: all 0.75s;
+  background: var(--bg-body);
+  border: 1px solid var(--color);
+  cursor: pointer;
+}
+
+.btn--round {
+  border-radius: 50%;
+}
+
+.btn--dark-mode {
+  background: var(--btn-dk-bg);
+  border-color: var(--btn-dk-border);
+}
+
+.btn:hover,
+.btn:focus {
+  font-weight: 600;
+  transform: scale(1.05);
+}
+.btn-active {
+  transform: scale(1);
+}
+
+
+@media screen and (min-width: 400px) {
+  .colors__container:hover, .colors__container:focus {
+    transform: scale(1.05, 1.2);
+  }
+}
+
+@media screen and (min-width: 520px) {
+  header {
+    height: 11.4vh;
+  }
+
+  .color-selections {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1em;
+    height: 7.5vh;
+  }
+
+  .color-selections * {
+    max-width: 200px;
+  }
+
+  #color-selector {
+    max-width: unset;
+  }
+
+  .colors {
+    flex-direction: row;
+    justify-content: center;
+    margin: 1em -1em;
+    height: 70vh;
+  }
+  
+  .colors__container {
+    flex-direction: column;
+    height: 100%;
+    width: 20%;
+    transition: transform 0.75s;
+  }
+
+  .colors__container:hover, .colors__container:focus {
+    transform: scaleY(1.05);
+  }
+
+  .colors--bar {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .colors--name {
+    margin-left: unset;
+  }
+
+  .colors--hex {
+    width: initial;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .colors {
+    margin: 1em 0;
+  }
+}

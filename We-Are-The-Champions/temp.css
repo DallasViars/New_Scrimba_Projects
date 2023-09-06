@@ -1,0 +1,210 @@
+/* General formatting*/
+
+*, *::after, *::before { box-sizing: border-box; user-select: none; }
+html, body { margin: 0; padding: 0; }
+p { margin: 0; padding: 0; }
+:root {
+    --font-pagestyle: 'Josefin Sans', sans-serif;
+    --font-usertext: 'Inter', sans-serif;
+    --light-text-color: #fff;
+    --endorse-text-color: #1B1924;
+    --input-bg: #444059;
+    --border-radius: 8px;
+    --btn-text-color: #04131C;
+    --btn-bg: #28A9F1;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    font-size: 16px;
+    font-family: var(--font-pagestyle);
+    color: var(--light-text-color);
+    background: black;
+    padding: 2em;
+    margin: 0 auto;
+}
+
+
+/* Header formatting */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+img {
+    max-width: 100px;
+    
+}
+h1 {
+  text-align: center;
+}
+
+
+/* Main formatting */
+
+main {
+  text-align: center;
+}
+.inputs-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 2px;
+  font-family: var(--font-usertext);
+  flex-basis: 1;
+}
+textarea {
+    background: var(--input-bg);
+    color: var(--light-text-color);
+    width: 100%;
+    height: 118px;
+    border-radius: var(--border-radius);
+    padding: 0.75em 0.5em;
+    transition: all 0.5s;
+    resize: none;
+}
+textarea:hover, 
+textarea:focus, 
+input:hover, 
+input:focus {
+  outline: 3px solid lime;
+}
+.endorse-input {
+  width: calc(50% - 4px);
+  background: var(--input-bg);
+  color: var(--light-text-color);
+  border-radius: var(--border-radius);
+  text-align: center;
+  padding: 1em;
+  transition: all 0.5s;
+}
+
+
+/* Buttons */
+
+.btn {
+    background: var(--btn-bg);
+    width: 100%;
+    border-radius: var(--border-radius);
+    padding: 1em;
+    font-weight: 700;
+    transition: all 0.5s;
+}
+.btn:hover {
+  cursor: pointer;
+}
+
+.input-btn:hover, 
+.input-btn:focus {
+  background: var(--input-bg);
+  outline: 3px solid lime;
+  color: var(--btn-bg);
+}
+
+.modal-btn {
+  width: 45%;
+  font-size: 1.25rem;
+}
+.modal-btn-cancel {
+  background: rgba(255, 255, 255, 0.5);
+  color: rgba(0,0,0,0.75);
+}
+.modal-btn-cancel:hover,
+.modal-btn-cancel:focus {
+    color: rgba(255, 255, 255, 0.5);
+    background: rgba(0,0,0,0.75);
+}
+.modal-btn-delete {
+  background: salmon;
+}
+.modal-btn-delete:hover, 
+.modal-btn-delete:focus {
+    background: red;
+    color: whitesmoke;
+}
+
+
+/* Endorsements area formatting */
+
+.endorsements-area {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.endorsement {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    text-align: left;
+    background: #fff;
+    color: var(--endorse-text-color);
+    font-family: var(--font-usertext);
+    padding: 0.5em;
+    transition: all 0.35s;
+}
+.endorsement:hover, 
+.endorsement:focus {
+    opacity: 0.9;
+    outline: 5px solid salmon;
+    border-radius: var(--border-radius);
+}
+
+.endorsement-to {
+    width: 45%;
+    margin-right: auto;
+}
+.endorsement-time {
+    width: 50%;
+    text-align: right;
+    margin-left: auto;
+}
+.endorsement-from {
+    width: 70%;
+    margin-right: auto;
+}
+.endorsement-message {
+    width: 100%;
+    white-space: pre-wrap;
+}
+.endorsement-from {
+    padding: 1em 0;
+}
+.likes {
+    width: 20%;
+    text-align: right;
+    margin-left: auto;
+    padding: 1em 1em 1em 0;
+    padding-right: 1em;
+    transition: background 1s;
+    border-radius: 50% 50% 50% 50% / 100% 100% 100% 100%;
+}
+.likes:hover {
+    cursor: cell;
+    background: rgba(255, 0, 0, 0.25);
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+    outline: 5px solid red;
+    border-radius: var(--border-radius);
+    padding: 1em;
+    font-weight: 700;
+    text-align: center;
+}
+
+
+/* Utility classes*/
+.bold {
+  font-weight: 700;
+}
+.error-msg {
+    background: rgba(255, 0, 0, 0.25);
+    border: 3px solid red;
+}

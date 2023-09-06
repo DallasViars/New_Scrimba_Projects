@@ -1,0 +1,322 @@
+*, *::after, *::before { box-sizing: border-box; }
+p, h1, h2, h3, h4 { margin: 0; padding: 0; }
+html, body { margin: 0; padding: 0; }
+html {
+  font-family: 'Inter', sans-serif; 
+  font-weight: 700;
+  font-size: 16px;
+}
+:root {
+  --clr-primary: #FFD18C;
+  --clr-accent: #FFA724;
+  --clr-inactive: #FFFFFF;
+  --light-bg: #FDF7F4;
+  --black: #000000;
+}
+body {
+  position: relative;
+  background: var(--light-bg);
+  padding: 0 0.5em;
+  margin: 0 auto;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.25em;
+  background: var(--light-bg);
+}
+.header--img__logo {
+  max-height: 90px;
+  margin: 0 auto;
+}
+
+.btn__container {
+  margin-top: 12vh;
+  justify-content: center;
+  gap: 1em;
+  padding: 0.75em;
+}
+.btn {
+  padding: 0.5em;
+  border-radius: 50px;
+  border: 5px solid var(--clr-accent);
+  background: var(--clr-inactive);
+  width: 250px;
+  font-weight: 700;
+  font-size: 1.75rem;
+  transition: all 0.5s;
+}
+.btn:hover,
+.btn:focus {
+  background: var(--clr-accent);
+}
+.btn:active {
+  background: transparent;
+}
+
+main {
+  margin: 1.5em auto;
+  max-width: 1440px;
+  gap: 3em;
+  justify-content: center;
+}
+
+h2 {
+  place-self: center;
+  font-size: 2.5rem;
+}
+.main--accounts {
+  gap: 1em;
+  max-width: 400px;
+  min-width: 300px;
+  width: 100%;
+}
+.main--accounts__account,
+.main--accounts__bargraph {
+  justify-content: space-between;
+  border-radius: 15px;
+}
+.main--accounts__account {
+  border: 5px solid var(--clr-accent);
+  font-size: 1.25rem;
+  padding: 1.25em 0.5em;
+  gap: 0.5em;
+  transition: all 0.5s;
+}
+.main--accounts__account:hover,
+.main--accounts__account:focus {
+  background: var(--clr-primary);
+}
+.main--accounts__detail-list {
+  gap: 1.25em;
+}
+.main--accounts__bargraph {
+  background: var(--clr-primary);
+  font-size: 1.5rem;
+  padding: 0.5em 0.75em 0.5em 0.5em;
+  transition: all 0.5s;
+}
+.main--accounts__bargraph:hover,
+.main--accounts__bargraph:focus {
+  outline: 5px solid var(--clr-accent);
+}
+
+.flex { display: flex; }
+.row { flex-direction: row; }
+.col { flex-direction: column; }
+.wide100 { width: 100%; }
+.wide90 { width: 90%; }
+.wide80 { width: 80%; }
+.wide70 { width: 70%; }
+.wide60 { width: 60%; }
+.jcstart { justify-content: flex-start; }
+.jcend { justify-content: flex-end; }
+.aistart { align-items: flex-start; }
+.aicenter { align-items: center; }
+.aiend { align-items: flex-end; }
+.hidden { display: none; }
+.resp-img { max-width: 100%; }
+
+.container {
+  background: var(--clr-light-bg);
+}
+
+/*
+
+Hamburger Menu code used was modified from
+Code and Create's Hamburger Menu with HTML, CSS, and 
+JavaScript / Cool Hover Effects with ::after and ::before
+that can be found here: https://youtu.be/BN6fH1nRDxA
+
+*/
+
+
+.hamburger-menu {
+  width: 35px;
+  height: 30px;
+  position: fixed;
+  top: 9vh;
+  right: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.line {
+  width: 100%;
+  height: 3px;
+  background: var(--clr-primary);
+  transition: all 1s;
+}
+
+.change .line {
+  background: var(--clr-accent);
+}
+.change .line-1 {
+  transform: rotateZ(-405deg) translate(-8px, 6px); 
+}
+.change .line-2 {
+  opacity: 0;
+}
+.change .line-3 {
+  transform: rotateZ(405deg) translate(-8px, -6px);
+}
+
+.navbar {
+  width: min-content;
+  padding: 0 2em;
+  height: 100%;
+  background: var(--clr-primary);
+  border-left: 1em solid var(--clr-accent);
+  position: fixed;
+  top: 0;
+  right: -300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50% 0 0 50%;
+  transition: right 0.7s cubic-bezier(1, 0, 0, 1);
+}
+.change {
+  right: 0;
+}
+.nav-list {
+  text-align: right;
+}
+
+.nav-item {
+  list-style: none;
+  margin: 2em 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1em;
+  color: black;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  padding: 3px 0;
+}
+
+.nav-link::before,
+.nav-link::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: chocolate;
+  position: absolute;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+.nav-link::before {
+  top: 0;
+  transform-origin: left;
+}
+.nav-link::after {
+  bottom: 0;
+  transform-origin: right;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+@media screen and (min-width: 400px) {
+  .hamburger-menu {
+    top: 10vh;
+  }
+}
+@media screen and (min-width: 450px) {
+  .main--accounts .col {
+    flex-direction: row;
+  }
+  .hamburger-menu {
+    top: 11vh;
+  }
+}
+
+@media screen and (min-width: 675px) {
+  .btn__container.col {
+    flex-direction: row;
+  }
+  .btn__container {
+    margin-top: 14vh;
+  }
+  main.col {
+    flex-direction: row;
+  }
+  main.aicenter {
+    align-items: normal;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .navbar {
+    width: min-content;
+    padding: 0;
+    height: 100%;
+    background: var(--clr-primary);
+    border-left: none;
+    position: initial;
+    top: 0;
+    right: -300px;
+    display: flex;
+    justify-content: normal;
+    align-items: normal;
+    border-radius: initial;
+    transition: right 0.7s cubic-bezier(1, 0, 0, 1);
+}
+  .hamburger-menu {
+    display: none;
+  }
+  .nav-list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: initial;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15vh;
+    background: var(--clr-primary);
+    padding: 0 7em; 
+    transition: padding 0.25s;
+  }
+  .btn__container {
+    margin-top: 28vh;
+  }
+  .main--accounts {
+    width: 100%;
+    max-width: 450px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .nav-list {
+      padding: 0px 9em;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .nav-list {
+      padding: 0px 13em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav-list {
+      padding: 0px 18em;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .nav-list {
+      padding: 0px 25em;
+  }
+}

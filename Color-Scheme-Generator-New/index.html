@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="./css/index.css" rel="stylesheet">
+  <title>Color Scheme Generator</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 tabindex="-1">Color Scheme Generator</h1>
+      <button id="btn-toggle-color-mode" class="btn btn--round btn--dark-mode">Dark Mode</button>
+    </header>
+    <main>
+      <section class="color-selections">
+        <input id="color-input" type="color">
+        <select id="color-selector">
+          <option value="monochrome">monochrome</option>
+          <option value="monochrome-dark">monochrome-dark</option>
+          <option value="monochrome-light">monochrome-light</option>
+          <option value="analogic">analogic</option>
+          <option value="complement">complement</option>
+          <option value="analogic-complement">analogic-complement</option>
+          <option value="triad">triad</option>
+          <option value="quad">quad</option>
+        </select>
+        <button id="get-color-scheme-btn" class="btn">Get color scheme</button>
+      </section>
+      <section id="colors" class="colors">
+      </section>
+    </main>
+    <footer tabindex="0">
+      <p>© 2023 Dallas Viars</p>
+    </footer>
+  </div> 
+  <script src="./js/index.js" type="module"></script>
+</body>
+</html>

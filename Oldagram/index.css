@@ -1,0 +1,93 @@
+/* General formatting*/
+*, *::after, *::before { box-sizing: border-box; }
+p, h1, h2, h3 { margin: 0; }
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+header {
+    height: 13vh;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #C6C6C6;
+}
+main {
+    background: #EDEDED;
+}
+section {
+    margin-bottom: 2em;
+}
+
+
+/* Post formatting */
+
+.post-info {
+    height: 13vh;
+    padding: 1em;
+    gap: 0.5em;
+    background: #fff;
+}
+.post-likes {
+    padding: 1em;
+    background: #fff;
+}
+.post-likes-icons {
+    height: 5vh;
+    max-width: 10rem;
+}
+.post-likes-count {
+    margin-top: 1em;
+}
+.post-comments {
+    padding: 1em;
+    background: #fff;
+}
+.icon {
+    transition: all 0.5s;
+    color: transparent;
+}
+.icon:hover, 
+.icon:focus {
+    opacity: 0.5;
+}
+.icon:active {
+    transform: scale(0.9)
+}
+.icon:hover {
+    cursor: pointer;
+}
+
+
+/* Utility classes */
+
+.img-avatar {
+    border-radius: 50%;
+}
+.text-bold {
+    font-weight: 700;
+    font-size: 13px;
+}
+.img-resp {
+    max-width: 100%;
+}
+.flex {
+    display: flex;
+}
+.space-between {
+    justify-content: space-between;
+}
+.center-v {
+    justify-content: center;
+}
+.col {
+    flex-direction: column;
+}
+
+*:focus {
+    outline: 5px solid red;
+}
