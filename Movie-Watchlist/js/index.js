@@ -131,6 +131,8 @@ async function getMovieHTML(imdbIDList) {
   return html;
 }
 
+/* Saves the most recent user search to display when the user returns
+to index.html */
 function updateSessionSearch(imdbIDList) {
   sessionSearchTerm = sessionStorage.setItem("sessionSearchTerm", JSON.stringify(searchInput.value));
   sessionSearch = sessionStorage.setItem("sessionSearch", JSON.stringify(imdbIDList));
@@ -158,6 +160,8 @@ async function addToWatchlist(e, imdbID) {
   document.querySelector(`[data-id="${imdbID}"]`).classList.toggle("on-watchlist");
 }
 
+/* Updates the +/- image for the Add to watchlist function and ensures the usage
+of the proper color scheme's icon */
 async function updateAddBtnImg(e) {
   let btnElement = e.srcElement.tagName === "BUTTON" ? e.target : e.srcElement.parentElement;
   let imgElement = e.srcElement.tagName === "IMG" ? e.target : e.target.children[0];
