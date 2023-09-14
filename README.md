@@ -7,7 +7,7 @@ This is a repo containing the Scrimba Solo Projects I've done. I utilize a mobil
 <details>
   <summary>Movie Watchlist</summary>
   
-  - [Movie Watchlist](https://dallasviars.github.io/New_Scrimba_Projects/Movie-Watchlist/)
+  - [Movie Watchlist](https://dallasviars.github.io/ScrimbaProjects/Movie-Watchlist/)
   
   ### Project requirements: 
   - Contain two pages
@@ -47,7 +47,7 @@ If I were to do this project again in the future I would explore the use of Part
 <details>
   <summary> Color Scheme Generator </summary>
   
-  - [Color Scheme Generator](https://dallasviars.github.io/New_Scrimba_Projects/Color-Scheme-Generator/)
+  - [Color Scheme Generator](https://dallasviars.github.io/ScrimbaProjects/Color-Scheme-Generator/)
   
   #### Project requirements: 
   - Use an `<input type="color">` element
@@ -79,18 +79,18 @@ My next updates on this project will be:
 <details>
   <summary>Other projects</summary>
 
-  - [We Are the Champions](https://dallasviars.github.io/New_Scrimba_Projects/We-Are-The-Champions/)
+  - [We Are the Champions](https://dallasviars.github.io/ScrimbaProjects/We-Are-The-Champions/)
      - An app using Firebase designed to allow you to cheer on your friends and colleagues by leaving notes celebrating their work.
-  - [Tindog](https://dallasviars.github.io/New_Scrimba_Projects/Tindog/)
+  - [Tindog](https://dallasviars.github.io/ScrimbaProjects/Tindog/)
      - A Tinder clone for finding animal friends for your pets!
      - I've never used Tinder and since the Figma design only had a mobile layout I created a wider-screen option.
      - When I revisit this project I plan to use React and also implement sidebars listing the accepted/rejected matches
-  - [Oldagram](https://dallasviars.github.io/New_Scrimba_Projects/Oldagram/)
+  - [Oldagram](https://dallasviars.github.io/ScrimbaProjects/Oldagram/)
        - An Instagram clone
        - Double clicking the main image or the heart icon increases the like count, Shift+click reduces the like count
-  - [Learning Journal](https://dallasviars.github.io/New_Scrimba_Projects/Learning-Journal/)
+  - [Learning Journal](https://dallasviars.github.io/ScrimbaProjects/Learning-Journal/)
        - An online journaling site demo
-  - [Best Bank](https://dallasviars.github.io/New_Scrimba_Projects/Best-Bank/)
+  - [Best Bank](https://dallasviars.github.io/ScrimbaProjects/Best-Bank/)
        - A simple Banking page
        - When I revisit this project I plan to add functionality to create transactions for the accounts
 
