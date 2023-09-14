@@ -21,7 +21,8 @@ export function setColorInputTitle(e) {
   getColorInput.setAttribute("title", getColorInput.value);
 }
 
-/* This function removes the focus from the currently focused element */
+/* This function removes the focus from the currently focused element,
+    this prevents a focused element from getting stuck in the hover/focus state */
 export function unfocusElement() {
   document.activeElement.blur();
 }
